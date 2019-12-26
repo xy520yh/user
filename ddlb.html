@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta content="telephone=no" name="format-detection" />
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <meta content="email=no" name="format-detection" />
+  <title>订单列表</title>
+  <meta name="Keywords" content="" />
+  <meta name="description" content="" />
+  <link href="css/main.css" rel="stylesheet" type="text/css">
+
+  <script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?416e86cae34c1ed76d47cf9945e0d941";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+</head>
+
+<body id="section1">
+  <div class="wrap" id="app">
+    <div class="wrap_header">
+      <div class="header_title">订单列表</div>
+      <div class="header_close"><a href="javascript:;"><img src="images/header_close.jpg" /></a></div>
+    </div>
+    <div class="wrap_passport">
+      <ul class="list" v-infinite-scroll="load" style="overflow:auto;height: 156px;">
+        <li>
+          <span class="sq01">订单号</span>
+          <span class="sq02">充值金额</span>
+          <span class="sq03">下单时间</span>
+          <span class="sq04">订单状态</span>
+        </li>
+        <li v-for="i in count">
+          <span class="sq01">123</span>
+          <span class="sq02">333</span>
+          <span class="sq03">2019-12-19 14：00</span>
+          <span class="sq04">已完成</span>
+        </li>
+        <span v-if="isLoading">加载中...</span>
+        <!-- <li>
+          <span class="sq01">123</span>
+          <span class="sq02">333</span>
+          <span class="sq03">2019-12-19 14：00</span>
+          <span class="sq04">已完成</span>
+        </li> -->
+      </ul>
+      <div class="img_row"><img src="images/btn_28.png" /></div>
+    </div>
+    <div class="wrap_footer"></div>
+  </div>
+
+  </div>
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <script>
+  //css判断横屏和竖屏
+//　<link rel="stylesheet" media="all and (orientation:portrait)" href="portrait.css" rel="external nofollow" > //引用竖屏的CSS
+　//<link rel="stylesheet" media="all and (orientation:landscape)" href="landscape.css" rel="external nofollow" > //引用横屏的CSS
+// js判断横屏和竖屏；
+    window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function () {
+      if (window.orientation === 180 || window.orientation === 0) {
+        alert('竖屏状态！');
+      }
+      if (window.orientation === 90 || window.orientation === -90) {
+        alert('横屏状态！');
+      }
+    }, false);
+
+    
+    $('#btn').click(function () {
+
+      //设置按钮倒计时
+
+      $(this).addClass('disabled'); //把按钮变灰
+
+      $(this).attr('disabled', true); //把按钮变灰
+
+      var time = 60;
+
+      $(this).text(time + 's'); //把按钮变成秒数显示
+
+      var interval = setInterval(() => {
+
+        if (time <= 0) {
+
+          clearInterval(interval); //清楚倒计时
+
+          $(this).removeClass('disabled'); //把灰色按钮变成还原
+
+          $(this).attr('disabled', false); //把灰色按钮变成还原
+
+          $(this).text('发送验证码'); //把灰色按钮变成还原
+
+          return false;
+
+        }
+
+        time--; //时间自动减1
+
+        $(this).text(time + 's'); //把按钮变成秒数显示 自动减1后的
+
+      }, 1000); //每秒执行一下
+
+
+
+    });
+
+
+    new Vue({
+      el: "#app",
+      data() {
+        return {
+          count: [{
+            orderNumber: 1231,
+            orderamount: 333,
+            ordertime: "2019-12-19 14：00",
+            orderState: "已经完成"
+          },
+          {
+            orderNumber: 1232,
+            orderamount: 333,
+            ordertime: "2019-12-19 14：00",
+            orderState: "已经完成"
+          },
+          {
+            orderNumber: 1233,
+            orderamount: 333,
+            ordertime: "2019-12-19 14：00",
+            orderState: "已经完成"
+          },
+          {
+            orderNumber: 1234,
+            orderamount: 333,
+            ordertime: "2019-12-19 14：00",
+            orderState: "已经完成"
+          },
+          {
+            orderNumber: 1235,
+            orderamount: 333,
+            ordertime: "2019-12-19 14：00",
+            orderState: "已经完成"
+          }, {
+            orderNumber: 1235,
+            orderamount: 333,
+            ordertime: "2019-12-19 14：00",
+            orderState: "已经完成"
+          }
+
+          ],
+          isLoading: false
+        }
+      },
+      methods: {
+        load() {
+          console.log(111);
+          this.isLoading = true;
+          // this.count += 1
+          setTimeout(() => {
+            this.count.push({
+              orderNumber: 132,
+              orderamount: 111,
+              ordertime: "2019-12-19 14：00",
+              orderState: "添加的数据"
+            })
+            this.isLoading = false;
+          }, 500)
+        }
+      }
+    })
+
+
+
+  </script>
+</body>
+
+</html>
