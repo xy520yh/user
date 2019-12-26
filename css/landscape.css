@@ -1,7 +1,7 @@
-.wrap_header{ background:url(../images/wrap_head_bg.jpg) no-repeat;width:7.5rem; height:.42rem;  background-size: 100% 100%; text-align:center;}
+.wrap_header{ background:#f00;width:7.5rem; height:.22rem;  background-size: 100% 100%; text-align:center;}
 .header_title{font-size:0.36rem; color:#fff;height:0.42rem; line-height:1.42rem; width:7.5rem;}
 .header_close{position:absolute; top:0.15rem; left:0.23rem;}
-.header_close img{width:0.23rem; height:0.23rem;}
+.header_close img{width:0.22rem; height:0.22rem;}
 
 
 .list{width:6.4rem;border:1px solid #333;text-align:center;}
