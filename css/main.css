@@ -94,7 +94,7 @@ span.yzm button{width:1.8rem; display:block;height:0.54rem;background:none;}
 	-webkit-transform:scale(1.2, 1.2); /* Safari 和 Chrome */
 	-o-transform:scale(1.2, 1.2); 	/* Opera */ transition:1s;}
 .list{width:6.4rem;border:1px solid #333;text-align:center;}
-.list li{height:0.6rem; line-height:0.6rem; border-bottom:1px solid #333;background:#fff; font-size:0.22rem}
+.list li{ border-bottom:1px solid #333;background:#fff; font-size:0.22rem;box-sizing:border-box;}
 .sq01{width:1.4rem; display:block; float:left; text-align:center; overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
 .sq02{width:1.4rem; display:block; float:left;text-align:center;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
 .sq03{width:1.6rem; display:block; float:left;text-align:center;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
