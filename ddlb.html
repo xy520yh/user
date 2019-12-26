@@ -13,7 +13,6 @@
   <meta name="Keywords" content="" />
   <meta name="description" content="" />
   <link href="css/main.css" rel="stylesheet" type="text/css">
-
   <script>
     var _hmt = _hmt || [];
     (function () {
@@ -61,11 +60,12 @@
   </div>
 
   <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
   <script>
   //css判断横屏和竖屏
-//　<link rel="stylesheet" media="all and (orientation:portrait)" href="portrait.css" rel="external nofollow" > //引用竖屏的CSS
-　//<link rel="stylesheet" media="all and (orientation:landscape)" href="landscape.css" rel="external nofollow" > //引用横屏的CSS
+　  <link rel="stylesheet"   media="all and (orientation:portrait)"  href="css/portrait.css" rel="external nofollow" > 
+ 　 <link  rel="stylesheet"  media="all and (orientation:landscape)"  href="css/landscape.css" rel="external nofollow" > 
+
 // js判断横屏和竖屏；
     window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function () {
       if (window.orientation === 180 || window.orientation === 0) {
@@ -75,46 +75,6 @@
         alert('横屏状态！');
       }
     }, false);
-
-    
-    $('#btn').click(function () {
-
-      //设置按钮倒计时
-
-      $(this).addClass('disabled'); //把按钮变灰
-
-      $(this).attr('disabled', true); //把按钮变灰
-
-      var time = 60;
-
-      $(this).text(time + 's'); //把按钮变成秒数显示
-
-      var interval = setInterval(() => {
-
-        if (time <= 0) {
-
-          clearInterval(interval); //清楚倒计时
-
-          $(this).removeClass('disabled'); //把灰色按钮变成还原
-
-          $(this).attr('disabled', false); //把灰色按钮变成还原
-
-          $(this).text('发送验证码'); //把灰色按钮变成还原
-
-          return false;
-
-        }
-
-        time--; //时间自动减1
-
-        $(this).text(time + 's'); //把按钮变成秒数显示 自动减1后的
-
-      }, 1000); //每秒执行一下
-
-
-
-    });
-
 
     new Vue({
       el: "#app",
