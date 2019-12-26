@@ -1,4 +1,8 @@
-
+.wrap{ margin:0 auto; width:7.5rem; position:relative;}
+.wrap_header{ background:url(../images/wrap_head_bg.jpg) no-repeat;width:7.5rem; height:1.42rem;  background-size: 100% 100%; text-align:center;}
+.header_title{font-size:0.36rem; color:#fff;height:1.42rem; line-height:1.42rem; width:7.5rem;}
+.header_close{position:absolute; top:0.15rem; left:0.23rem;}
+.header_close img{width:0.23rem; height:0.23rem;}
 .list{width:6.4rem;border:1px solid #333;text-align:center;}
 .list li{ border-bottom:1px solid #333;background:#fff; font-size:0.22rem;box-sizing:border-box; height:0.5rem; line-height:0.5rem;}
 .sq01{width:1.4rem; display:block; float:left; text-align:center; overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
@@ -18,3 +22,4 @@
 .xg_s select{width:4.4rem; height:0.5rem; }
 .xg_s01 select{width:2.1rem; height:0.5rem; float:left; margin-right:0.2rem;}
 .xg_s02 select{width:2.1rem; height:0.5rem;}
+.wrap_footer{background:#2ba785; width:7.5rem; height:0.47rem; position:fixed; bottom:0rem; left:0rem;}

@@ -31,7 +31,7 @@
       <div class="header_close"><a href="javascript:;"><img src="images/header_close.jpg" /></a></div>
     </div>
     <div class="wrap_passport">
-      <ul class="list" v-infinite-scroll="load" style="overflow:auto;height: 156px;">
+      <ul class="list" v-infinite-scroll="load">
         <li>
           <span class="sq01">订单号</span>
           <span class="sq02">充值金额</span>
@@ -63,16 +63,16 @@
   <script type="text/javascript" src="js/main.js"></script>
   <script>
   //css判断横屏和竖屏
-　 // <link rel="stylesheet"   media="all and (orientation:portrait)"  href="css/portrait.css" rel="external nofollow" > 
- 　 //<link  rel="stylesheet"  media="all and (orientation:landscape)"  href="css/landscape.css" rel="external nofollow" > 
+　
+
 
 // js判断横屏和竖屏；
     window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function () {
       if (window.orientation === 180 || window.orientation === 0) {
-        alert('竖屏状态！');
+        <link rel="stylesheet"   media="all and (orientation:portrait)"  href="css/portrait.css" rel="external nofollow" > 
       }
       if (window.orientation === 90 || window.orientation === -90) {
-        alert('横屏状态！');
+         　<link  rel="stylesheet"  media="all and (orientation:landscape)"  href="css/landscape.css" rel="external nofollow" > 
       }
     }, false);
 
